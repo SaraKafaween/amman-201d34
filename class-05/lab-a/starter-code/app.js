@@ -28,8 +28,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let totaly = c * d;
-  return [totaly, `The multiply of ${c} and ${d} is ${totaly}.`];
+  let totaly = a * b;
+  return [totaly, `The product of ${a} and ${b} is ${totaly}.`];
   
 }
 
@@ -60,8 +60,8 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let s = r[0];
   let t = multiply(r, s);
   let multall = t[0];
-  
-  return [sumall, multall, `${a} and ${b} and ${c} summation to ${sumall} the product of ${a} and ${b} and ${c} is ${multall}.`]
+ 
+  return [sumall,  multall, `${a} and ${b} and ${c} sum to ${sumall}.`, `The product of ${a} and ${b} and ${c} is ${multall}.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -86,7 +86,7 @@ function sumArray(sumArr) { //eslint-disable-line
 
     let x = sum(sumArr[0], sumArr[1])[0];
     let y = sum(x, sumArr[2])[0];
-    return[y, `the sum of the array elements.`];
+    return[y, `2,3,4 was passed in as an array of numbers, and ${y} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -106,14 +106,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyyArra(multArr) { //eslint-disable-line
+function multiplyArray(multArr) { //eslint-disable-line
   let x = multiply(multArr[0], multArr[1])[0];
   let y = multiply(x, multArr[2])[0];
-  return[y, `the multiply of the array elements.`];
+  return[y, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${y}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArra(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -141,7 +141,8 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   for (let s = 0; s < array.length; s++) {
          mult =  mult*array[s];
     }
-return mult;
+return [`The numbers ${multiplyanyarray[1]},${multiplyanyarray[2]},${multiplyanyarray[3]},${multiplyanyarray[4]},${multiplyanyarray[5]} have a product of ${mult}.`];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
